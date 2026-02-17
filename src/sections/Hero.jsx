@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react"; 
-
+import { ArrowRight, Github } from "lucide-react"; 
 
 const maskVariants = {
   hidden: { y: "100%" },
@@ -10,18 +9,17 @@ const maskVariants = {
   }
 };
 
-
 const containerVariants = {
   visible: {
     transition: { staggerChildren: 0.1, delayChildren: 0.2 }
   }
 };
 
-export default function Hero() {
+export default function Hero({ onContactClick }) {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-6 pt-20">
       
-      
+      {/* Background Ambient Glow */}
       <div className="absolute top-[-20%] left-[-10%] h-[600px] w-[600px] rounded-full bg-ice-800/20 blur-[120px] mix-blend-screen" />
       <div className="absolute bottom-[-10%] right-[-10%] h-[500px] w-[500px] rounded-full bg-indigo-900/20 blur-[120px] mix-blend-screen" />
 
@@ -33,7 +31,7 @@ export default function Hero() {
           className="flex flex-col items-start gap-6"
         >
           
-          
+          {/* Status Badge */}
           <motion.div 
             variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
             className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 backdrop-blur-md"
@@ -47,7 +45,7 @@ export default function Hero() {
             </span>
           </motion.div>
 
-          
+          {/* Main Headline */}
           <h1 className="font-display text-6xl font-bold leading-[1.1] tracking-tighter text-white md:text-8xl lg:text-9xl">
             
             <div className="overflow-hidden">
@@ -56,11 +54,9 @@ export default function Hero() {
               </motion.div>
             </div>
             
-           
             <div className="overflow-hidden text-slate-500">
               <motion.div variants={maskVariants} className="flex items-center gap-4">
                 <span>products,</span>
-                
                 <motion.div 
                    initial={{ width: 0 }} 
                    animate={{ width: 100 }} 
@@ -70,7 +66,6 @@ export default function Hero() {
               </motion.div>
             </div>
             
-            
             <div className="overflow-hidden">
               <motion.div variants={maskVariants}>
                 brands, & <span className="text-transparent bg-clip-text bg-gradient-to-r from-ice-200 to-ice-600">experience.</span>
@@ -78,7 +73,7 @@ export default function Hero() {
             </div>
           </h1>
 
-          
+          {/* Subtext */}
           <motion.p 
              variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { delay: 1 } } }}
              className="mt-4 max-w-xl text-lg text-slate-400 md:text-xl"
@@ -87,17 +82,27 @@ export default function Hero() {
             responsive, and human.
           </motion.p>
 
-          {/* Buttons */}
+          {/* Buttons Section - UPDATED */}
           <motion.div 
             variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { delay: 1.2 } } }}
             className="mt-8 flex flex-wrap gap-4"
           >
-            <button className="group relative flex items-center gap-2 overflow-hidden rounded-full bg-white px-8 py-3 font-semibold text-ice-950 transition-all hover:bg-ice-100">
+            {/* 1. GitHub Link */}
+            <a 
+                href="https://github.com/Mannyfa" // Replace with your actual GitHub URL
+                target="_blank"
+                rel="noreferrer"
+                className="group relative flex items-center gap-2 overflow-hidden rounded-full bg-white px-8 py-3 font-semibold text-ice-950 transition-all hover:bg-ice-100"
+            >
+              <Github className="relative z-10 h-4 w-4" />
               <span className="relative z-10">See my work</span>
-              <ArrowRight className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </button>
+            </a>
             
-            <button className="group flex items-center gap-2 rounded-full border border-white/10 bg-transparent px-8 py-3 font-semibold text-white transition-colors hover:bg-white/5">
+            {/* 2. Contact Modal Trigger */}
+            <button 
+                onClick={onContactClick} // Connected to the prop
+                className="group flex items-center gap-2 rounded-full border border-white/10 bg-transparent px-8 py-3 font-semibold text-white transition-colors hover:bg-white/5"
+            >
               Contact Me
             </button>
           </motion.div>
@@ -105,7 +110,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-     
+      {/* Scroll Indicator */}
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

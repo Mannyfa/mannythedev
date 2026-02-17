@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
 const socialLinks = [
-  { name: "Twitter", href: "#" },
-  { name: "LinkedIn", href: "#" },
-  { name: "GitHub", href: "#" },
-  { name: "Instagram", href: "#" },
+  { name: "Twitter", href: "https://x.com/manny_ux" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/manny-fabusuyi-5628b6110/" },
+  { name: "GitHub", href: "https://github.com/Mannyfa" },
+  { name: "Instagram", href: "https://www.instagram.com/omgitsmanny_" },
 ];
 
 export default function Footer() {

@@ -68,7 +68,7 @@ export default function Hero({ onContactClick }) {
             
             <div className="overflow-hidden">
               <motion.div variants={maskVariants}>
-                brands, & <span className="text-transparent bg-clip-text bg-gradient-to-r from-ice-200 to-ice-600">experience.</span>
+                brands, & Designs <span className="text-transparent bg-clip-text bg-gradient-to-r from-ice-200 to-ice-600">experience.</span>
               </motion.div>
             </div>
           </h1>

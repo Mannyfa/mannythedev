@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { X } from "lucide-react";
+import { X, Send } from "lucide-react";
 
 export default function ContactModal({ isOpen, onClose }) {
   return (
@@ -17,7 +17,7 @@ export default function ContactModal({ isOpen, onClose }) {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-md overflow-hidden rounded-2xl border border-white/10 bg-ice-900 p-8 shadow-2xl text-center"
+            className="relative w-full max-w-lg overflow-hidden rounded-2xl border border-white/10 bg-ice-900 p-8 shadow-2xl"
           >
             <button 
                 onClick={onClose}
@@ -26,36 +26,28 @@ export default function ContactModal({ isOpen, onClose }) {
                 <X size={20} />
             </button>
 
-            <h3 className="text-3xl font-display font-bold text-white mb-2">Let's Connect</h3>
-            <p className="text-slate-400 mb-8">Choose your preferred platform.</p>
+            <h3 className="text-3xl font-display font-bold text-white mb-2">Let's talk.</h3>
+            <p className="text-slate-400 mb-6">Tell me about your project.</p>
 
-            <div className="grid grid-cols-2 gap-4">
-                {/* 1. X (Twitter) Button */}
-                <a 
-                    href="https://x.com/manny_ux" 
-                    target="_blank" 
-                    rel="noreferrer"
-                    className="group flex flex-col items-center justify-center gap-3 rounded-xl border border-white/5 bg-white/5 p-6 transition-all hover:bg-white/10 hover:scale-105"
-                >
-                    <svg viewBox="0 0 24 24" className="h-8 w-8 fill-white" aria-hidden="true">
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
-                    </svg>
-                    <span className="font-medium text-white">X / Twitter</span>
-                </a>
+            <form action="https://formspree.io/f/xdaldaow" method="POST" className="space-y-4">
+                <div>
+                    <label className="block text-sm text-slate-400 mb-1">Name</label>
+                    <input type="text" name="name" required className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-ice-500 transition-colors" />
+                </div>
+                <div>
+                    <label className="block text-sm text-slate-400 mb-1">Email</label>
+                    <input type="email" name="email" required className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-ice-500 transition-colors" />
+                </div>
+                <div>
+                    <label className="block text-sm text-slate-400 mb-1">Message</label>
+                    <textarea name="message" rows="4" required className="w-full bg-white/5 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-ice-500 transition-colors"></textarea>
+                </div>
+                
+                <button type="submit" className="w-full bg-white text-ice-950 font-bold py-4 rounded-lg hover:bg-ice-200 transition-colors flex items-center justify-center gap-2">
+                    Send Message <Send size={18} />
+                </button>
+            </form>
 
-                {/* 2. WhatsApp Button */}
-                <a 
-                    href="https://wa.me/2349065905546" 
-                    target="_blank" 
-                    rel="noreferrer"
-                    className="group flex flex-col items-center justify-center gap-3 rounded-xl border border-white/5 bg-green-900/20 p-6 transition-all hover:bg-green-900/40 hover:scale-105 hover:border-green-500/50"
-                >
-                    <svg viewBox="0 0 24 24" className="h-8 w-8 fill-green-500 transition-transform group-hover:scale-110" aria-hidden="true">
-                        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.592 2.654-.696c1.009.575 1.944.88 3.121.88 3.185 0 5.77-2.587 5.77-5.766.001-3.179-2.585-5.766-5.766-5.766zm9.956 1.482c-1.425-2.483-4.062-4.048-6.969-4.148h-.019c-4.408 0-7.999 3.59-8.003 7.999 0 1.41.368 2.787 1.066 3.996L6.5 21.499l6.096-1.599c1.171.639 2.508.979 3.849.98h.005c4.407 0 8.003-3.593 8.003-8.003 0-2.135-.83-4.142-2.336-5.648z"></path>
-                    </svg>
-                    <span className="font-medium text-green-400">WhatsApp</span>
-                </a>
-            </div>
           </motion.div>
         </motion.div>
       )}

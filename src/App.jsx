@@ -27,6 +27,8 @@ import ContactModal from './components/ContactModal';
 // --- 1. IMPORT YOUR IMAGES HERE ---
 import feminaimh from './images/feminaimg.jpg'; 
 import maxutimg from './images/maxutimg.jpg'; 
+import vikky from './images/vickyimg.png';
+import ttshop from './images/ttshp.png'
 
 // --- 2. DATA STRUCTURE ---
 const projects = [
@@ -49,7 +51,28 @@ const projects = [
     image: maxutimg, 
     link: "https://maxut.com", 
     github: null
-  }
+  },
+  {
+    id: 3,
+    title: "OpeVickyscent Website",
+    category: "E-Commerce Website",
+    description: "A professional e-commerce website built for scalability and performance. Includes a custom component library and optimized assets.",
+    tech: ["React", "Figma", "vite"],
+    image: vikky, 
+    link: "https://www.opevickyscents.com.ng", 
+    github: null
+  },
+  {
+    id: 4,
+    title: "Tailorshop Website",
+    category: "E-Commerce Website",
+    description: "A professional e-commerce website built for scalability and performance. Includes a custom component library and optimized assets.",
+    tech: ["React", "Figma", "vite"],
+    image: ttshop, 
+    link: "https://www.opevickyscents.com.ng", 
+    github: null
+  },
+
 ];
 
 // --- 3. INNER CONTENT COMPONENT ---

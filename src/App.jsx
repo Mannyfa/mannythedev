@@ -30,7 +30,7 @@ import maxutimg from './images/maxutimg.jpg';
 import vikky from './images/vickyimg.png';
 import ttshop from './images/ttshp.png'
 import foodwave from './images/foodwave.png';
-import grandtech from './images/grandtech.png';
+import grandtech from './images/gtsweb.png';
 // --- 2. DATA STRUCTURE ---
 const projects = [
   {

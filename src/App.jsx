@@ -29,7 +29,8 @@ import feminaimh from './images/feminaimg.jpg';
 import maxutimg from './images/maxutimg.jpg'; 
 import vikky from './images/vickyimg.png';
 import ttshop from './images/ttshp.png'
-
+import foodwave from './images/foodwave.png';
+import grandtech from './images/grandtech.png';
 // --- 2. DATA STRUCTURE ---
 const projects = [
   {
@@ -69,7 +70,27 @@ const projects = [
     description: "A professional e-commerce website built for scalability and performance. Includes a custom component library and optimized assets.",
     tech: ["React", "Figma", "vite"],
     image: ttshop, 
-    link: "https://www.opevickyscents.com.ng", 
+    link: "https://thetailorshop.vercel.app", 
+    github: null
+  },
+  {
+    id: 5,
+    title: "Foodwave bistro Website",
+    category: "Restaurant Website",
+    description: "A professional restaurant website built for scalability and performance. Includes a custom component library and optimized assets.",
+    tech: ["React", "Figma", "vite"],
+    image: foodwave, 
+    link: "https://www.foodwavebistro.com", 
+    github: null
+  },
+  {
+    id: 6,
+    title: "Grand tech solutions Website",
+    category: "Corporate Website",
+    description: "A professional corporate website built for scalability and performance. Includes a custom component library and optimized assets.",
+    tech: ["React", "Figma", "vite"],
+    image: grandtech, 
+    link: "https://grandtech-solutions.com", 
     github: null
   },
 

@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 
 export default function SEO({ title, description }) {
   const siteTitle = "Manny The Dev"; 
-  const siteUrl = "https://mannythedev.com"; // Replace with your actual deployed URL later
+  const siteUrl = "https://mannythedev.xyz"; 
 
   return (
     <Helmet>

@@ -31,6 +31,9 @@ import vikky from './images/vickyimg.png';
 import ttshop from './images/ttshp.png'
 import foodwave from './images/foodwave.png';
 import grandtech from './images/gtsweb.png';
+import shikini from './images/shikiniimage.png';
+
+
 // --- 2. DATA STRUCTURE ---
 const projects = [
   {
@@ -91,6 +94,16 @@ const projects = [
     tech: ["React", "Figma", "vite"],
     image: grandtech, 
     link: "https://grandtech-solutions.com", 
+    github: null
+  },
+  {
+    id: 7,
+    title: "Shikini Fashion Website",
+    category: "E-Commerce Website",
+    description: "A professional e-commerce fashion store website built for scalability and performance. Includes a custom component library and optimized assets.",
+    tech: ["React", "Figma", "vite"],
+    image: shikini, 
+    link: "https://shikinifashion.store", 
     github: null
   },
 
